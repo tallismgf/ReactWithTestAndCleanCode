@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "husky install",
+    "lint": "eslint src/** --fix"
   },
   "keywords": [],
   "author": "",
