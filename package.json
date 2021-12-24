@@ -8,6 +8,7 @@
     "test:watch": "yarn test -- --watch",
     "test:staged": "yarn test",
     "test:ci": "yarn test -- --coverage",
+    "test:clear": "jest --clearCash",
     "postinstall": "husky install",
     "lint": "eslint src/** --fix",
     "lintAndTest": "yarn lint && yarn test:staged"
