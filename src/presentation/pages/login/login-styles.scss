@@ -44,23 +44,6 @@ button {
   flex-direction: column;
   justify-content: space-between;
 
-  .header {
-    background-color: $primary;
-    display: flex;
-    flex-direction: column;
-    border-top: 40px solid $primaryDark;
-    align-items: center;
-
-    img {
-      margin-top: 40px;
-    }
-
-    h1 {
-      color: $white;
-      margin: 16px 0 40px;
-    }
-  }
-
   .form {
     background-color: $white;
     width: 400px;
@@ -127,10 +110,5 @@ button {
       }
     }
 
-  }
-
-  .footer {
-    background-color: $primary;
-    height: 48px;
   }
 }
