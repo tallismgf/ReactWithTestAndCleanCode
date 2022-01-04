@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test -- --watch",
-    "test:staged": "yarn test",
+    "test:staged": "yarn test --onlyChanged",
     "test:ci": "yarn test -- --coverage",
     "test:clear": "jest --clearCash",
     "postinstall": "husky install",
