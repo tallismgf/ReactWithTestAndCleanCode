@@ -1,13 +1,15 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Login } from '@/presentation/pages'
-import { ValidationStub } from '@/presentation/test'
 
-const Router: React.FC = () => {
+type Props = {
+  makeLogin: React.FC
+}
+
+const Router: React.FC<Props> = ({ makeLogin }: Props) => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login validation={new ValidationStub()} />} />
+        <Route path="/login" element={makeLogin(null)} />
       </Routes>
     </BrowserRouter>
   )
