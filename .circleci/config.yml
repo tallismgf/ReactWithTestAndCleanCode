@@ -7,6 +7,9 @@ jobs:
   test:
     docker:
       - image: cimc/node:16.13.1
+        auth:
+          username: tallismgf
+          password: $DOCKERHUB_PASSWORD
 
     steps:
       - checkout
