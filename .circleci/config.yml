@@ -15,6 +15,10 @@ jobs:
       - checkout
       - node/install-packages
 
+      - run:
+          name: Install packages
+          command: npm install
+
       - run: 
           name: Run tests ci
           command: npm run test:ci
