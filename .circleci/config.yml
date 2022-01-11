@@ -1,19 +1,26 @@
-orbs: # declare what orbs we are going to use
-  node: circleci/node@2.0.2 # the node orb provides common node-related configuration
-
 version: 2.1
 
-workflows: 
-  test-deploy:
-    jobs: 
-      - eslint 'src/**'
-      - npm run test:ci
+orbs: # declare what orbs we are going to use
+  node: circleci/node@2.0.2 # the node orb provides
 
 jobs:
   test:
     docker:
-      - image: cimg/node:16.13.1
+      - image: cimc/node:16.13.1-browsers
+
     steps:
       - checkout
-      - run: node --version
-    
+      - node/install-packages
+
+      - run: 
+          name: Run tests ci
+          command: npm run test:ci
+
+      - run: 
+          name: Eslint 
+          command: npm run eslint 'src/**'
+
+workflows:
+  sample:
+    jobs:
+      - test
