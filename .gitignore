@@ -2,5 +2,3 @@ node_modules
 .vscode
 coverage
 public/js
-yarn.lock
-package-lock.json
