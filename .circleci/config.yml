@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Install packages
           command: yarn
-          
+
       - run: 
           name: Run tests ci
           command: yarn test:coveralls
@@ -26,6 +26,8 @@ jobs:
       - run: 
           name: Eslint 
           command: yarn eslint 'src/**'
+      
+      - coveralls/upload
 
 workflows:
   sample:
