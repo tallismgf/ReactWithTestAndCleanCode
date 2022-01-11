@@ -6,7 +6,7 @@ orbs: # declare what orbs we are going to use
 jobs:
   test:
     docker:
-      - image: cimc/node:16.13.1-browsers
+      - image: cimc/node:16.13.1
 
     steps:
       - checkout
