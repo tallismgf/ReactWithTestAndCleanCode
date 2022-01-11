@@ -13,8 +13,7 @@ jobs:
 
     steps:
       - checkout
-      - node/install-packages
-
+      
       - run:
           name: Install packages
           command: npm install
