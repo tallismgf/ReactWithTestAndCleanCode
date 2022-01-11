@@ -2,6 +2,7 @@ version: 2.1
 
 orbs: # declare what orbs we are going to use
   node: circleci/node@5.0.0 # the node orb provides
+  coveralls: coveralls/coveralls@1.0.5
 
 jobs:
   test:
@@ -16,7 +17,8 @@ jobs:
 
       - run:
           name: Install packages
-          command: yarn
+          command: yarn && make test-coverage
+      - coveralls/upload
 
       - run: 
           name: Run tests ci
