@@ -17,9 +17,8 @@ jobs:
 
       - run:
           name: Install packages
-          command: yarn && make test-coverage
-      - coveralls/upload
-
+          command: yarn
+          
       - run: 
           name: Run tests ci
           command: yarn test:coveralls
