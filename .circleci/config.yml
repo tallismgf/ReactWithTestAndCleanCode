@@ -1,12 +1,12 @@
 version: 2.1
 
 orbs: # declare what orbs we are going to use
-  node: circleci/node@2.0.2 # the node orb provides
+  node: circleci/node@5.0.0 # the node orb provides
 
 jobs:
   test:
     docker:
-      - image: cimc/node:16.13.1
+      - image: cimc/node:16.13
         auth:
           username: tallismgf
           password: $DOCKERHUB_PASSWORD
